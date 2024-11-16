@@ -25,10 +25,10 @@ def find_pseudo_content(gth_path, element, xc, valence):
 def gen_cp2k_input(data):
     gth_path=os.path.join(data['cp2k_path'], 'data', 'GTH_POTENTIALS')
     element = data['element']
-    xc= data['xc']
+    xc= data.setdefault('xc', 'PBE')
     valence= data['valence']
     pseudo_content = find_pseudo_content(gth_path, element, xc, valence)
-    prefix= data['prefix']
+    prefix= data.setdefault('prefix', f"{element}-GTH-{xc}-q{valence}")
     core, valence = elec_config.get_core_valence(element, valence)
     str_core =  f"CORE [{core[0]}]"
     if len(core) > 1:

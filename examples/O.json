@@ -5,5 +5,6 @@
     "valence": 6,
     "prefix": "O-GTH-LDA",
     "basis_type": "DZVP",
-    "basis_rcut": 14
+    "basis_rcut": 14,
+    "short_range": 1
 }
