@@ -3,5 +3,7 @@
     "element": "H",
     "xc": "LDA",
     "valence": 1,
-    "prefix": "H-GTH-LDA"
+    "prefix": "H-GTH-LDA",
+    "basis_type": "DZVP",
+    "basis_rcut": 14
 }

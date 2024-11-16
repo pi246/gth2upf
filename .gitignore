@@ -4,3 +4,6 @@ debug.py
 *.log
 *.out
 *.upf
+*.orb
+*.png
+*GTH
