@@ -1,0 +1,7 @@
+{
+    "cp2k_path": "/home/fortneu49/cp2k",
+    "element": "O",
+    "xc": "LDA",
+    "valence": 6,
+    "prefix": "O-GTH-LDA"
+}
