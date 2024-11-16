@@ -1,0 +1,3 @@
+[submodule "deps/gaussian_orbital_for_ABACUS"]
+	path = deps/gaussian_orbital_for_ABACUS
+	url = https://github.com/fisherd99/gaussian_orbital_for_ABACUS.git
