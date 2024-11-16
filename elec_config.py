@@ -102,7 +102,6 @@ def get_core_valence(element, nval):
     core_init = electron_configurations[element][0]
     vals_init =electron_configurations[element][1:]
     nval_init = count_valence_num(vals_init)
-    print("nval_init: ", nval_init)
     if element == 'H' or element == 'He':
         return ["none"], electron_configurations[element]
     elif nval_init == nval:   #treat the core as another element to analyze
@@ -113,16 +112,11 @@ def get_core_valence(element, nval):
     elif nval_init > nval:   #try other possible valence numbers from the end of the list
         nval_try = 0
         core_left = electron_configurations[element]
-        print("core_left_init: ", core_left)
         val=[]
         for str_try in reversed(vals_init):
             nval_try += count_valence_num([str_try])
             core_left.pop()
             val.insert(0, str_try)
-            print("nval_try: ", nval_try)
-            print("core_left:", core_left)
-            print("val: ", val)
             if(nval_try == nval):
                 return core_left, val
     raise ValueError(f"Could not find core and valence for {element} with valence {nval}")
-        

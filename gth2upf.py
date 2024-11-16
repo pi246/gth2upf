@@ -29,9 +29,6 @@ def gen_cp2k_input(data):
     valence= data['valence']
     pseudo_content = find_pseudo_content(gth_path, element, xc, valence)
     prefix= data['prefix']
-    
-    print("pseudo content: ", pseudo_content)
-    
     core, valence = elec_config.get_core_valence(element, valence)
     str_core =  f"CORE [{core[0]}]"
     if len(core) > 1:
